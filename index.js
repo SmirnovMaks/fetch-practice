@@ -3,7 +3,8 @@ const getData = () => {
         .then(response => response.json())
         .then(data => {
             sendData(data);
-        });
+        })
+        .catch(err => console.log(err));
 };
 
 
@@ -17,8 +18,8 @@ const sendData = (data) => {
             },
         })
         .then((response) => response.json())
-        .then((json) => console.log(json));
-
+        .then((json) => console.log(json))
+        .catch(err => console.log(err));
 };
 
 
